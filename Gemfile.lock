@@ -1,0 +1,53 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    backports (2.0.2)
+    closure-compiler (1.0.0)
+    configuration (1.2.0)
+    haml (3.0.25)
+    heroku (1.17.16)
+      json (~> 1.4.6)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
+    jammit (0.6.0)
+      closure-compiler (>= 0.1.0)
+      yui-compressor (>= 0.9.1)
+    json (1.4.6)
+    launchy (0.3.7)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    mime-types (1.16)
+    monkey-lib (0.5.4)
+      backports
+    rack (1.2.1)
+    rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
+    sinatra (1.1.2)
+      rack (~> 1.1)
+      tilt (~> 1.2)
+    sinatra-advanced-routes (0.5.1)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
+      sinatra-sugar (~> 0.5.0)
+    sinatra-content-for2 (0.2.3)
+      sinatra
+    sinatra-reloader (0.5.0)
+      sinatra (~> 1.0)
+      sinatra-advanced-routes (~> 0.5.0)
+    sinatra-sugar (0.5.0)
+      monkey-lib (~> 0.5.0)
+      sinatra (~> 1.0)
+    tilt (1.2.2)
+    yui-compressor (0.9.4)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  haml (= 3.0.25)
+  heroku (= 1.17.16)
+  jammit (= 0.6.0)
+  sinatra (= 1.1.2)
+  sinatra-content-for2 (= 0.2.3)
+  sinatra-reloader (= 0.5.0)

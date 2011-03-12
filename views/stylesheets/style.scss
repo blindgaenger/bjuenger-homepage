@@ -1,0 +1,100 @@
+$blue: #9ac3f7;
+$white: #fff;
+$red: #c0321e;
+$gray_light: #ddd;
+$gray: #666;
+$black: #202020;
+
+@import "css3.scss";
+
+html, body {
+  background: url("/images/darkgrid.png") repeat scroll 0 0 $black;
+  color: $white;
+  font: 18px 'Lobster', arial, serif;
+  
+  a {
+    outline: 0;
+    text-decoration: none;
+  }
+
+  li {
+    list-style:none inside;
+  }
+}
+
+#content {
+  h1 {
+    @include text-shadow("3px 3px 0 #{$black}, 6px 6px 0 #{$gray}");
+    letter-spacing:-0.1em;
+  }
+  
+  h2 {
+    font-size: 5em;
+    margin-bottom: 0.2em;
+    @include text-shadow("2px 2px 0 #{$black}, 4px 4px 0 #{$gray}");
+  }
+
+  hr {
+    height: 2px;
+    background-color: $white;
+    border: 0px solid transparent;
+    margin: 2em auto;
+    width: 300px;
+  }
+
+  .separator {
+    clear:both;
+    color:$gray_light;
+    text-align:center;
+    font-size:2em;
+    margin: 100px 0;
+  }
+
+  @for $index from 0 through 9 {
+    .scale-#{$index} {
+      $scale: 1.0 - $index / 10.0;
+      @include transform("scale(#{$scale})");
+    }
+  }
+
+  p {
+    margin-bottom: 0.1em;
+    font-size: 1.5em;
+    line-height:1em;
+    color: $gray_light;
+    @include text-shadow(1px 1px 0 $gray);
+
+    a {
+      color: $gray_light;
+      &:hover {
+        text-decoration: underline;
+        @include text-shadow(1px 1px 0 $gray);
+      }
+    }
+
+  }
+
+  p.readmore {
+    text-align:center;
+    
+    a {
+      padding: 0.25em;
+      border: 2px solid $black;
+      background-color: $gray_light;
+      color: $black;
+      text-decoration: none;
+      @include text-shadow(1px 1px 0 $white);
+      
+      &:hover, &:active {
+        background: url("/images/red.png") repeat scroll 0 0 $red;
+        color: $white;
+        @include text-shadow(2px 2px 0 $black);
+        @include box-shadow(0px 0px 10px $white);
+      }
+    }
+  } 
+}
+
+@import "navigation.scss";
+
+@import "intro.scss";

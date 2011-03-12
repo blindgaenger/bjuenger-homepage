@@ -1,0 +1,36 @@
+/**
+ * Usage:
+ * @include text-shadow(4px 4px 0 $gray);
+ * @include text-shadow("2px 2px 0 #{$black}, 4px 4px 0 #{$gray}");
+ */
+
+@mixin css3($method, $options) {
+  -webkit-#{$method}: #{$options};
+     -moz-#{$method}: #{$options};
+       -o-#{$method}: #{$options};
+          #{$method}: #{$options};
+}
+ 
+@mixin box-shadow($options) {
+  @include css3("box-shadow", $options);
+}
+
+@mixin text-shadow($options) {
+  @include css3("text-shadow", $options);
+}
+
+@mixin border-radius($options) {
+  @include css3("border-radius", $options);
+}
+
+@mixin transition($options) {
+  @include css3("transition", $options);
+}
+
+@mixin transform($options) {
+  @include css3("transform", $options);
+}
+
+@mixin rotate($options) {
+  @include transform("rotate(#{$options})");
+}
