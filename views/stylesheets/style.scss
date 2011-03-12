@@ -1,15 +1,15 @@
 $blue: #9ac3f7;
 $white: #fff;
 $red: #c0321e;
-$gray_light: #ddd;
-$gray: #666;
+$gray_light: #444;
+$gray: #bbb;
 $black: #202020;
 
 @import "css3.scss";
 
 html, body {
-  background: url("/images/darkgrid.png") repeat scroll 0 0 $black;
-  color: $white;
+  background: url("/images/lightgrid.png") repeat scroll 0 0 $white;
+  color: $black;
   font: 18px 'Lobster', arial, serif;
   
   a {
@@ -24,19 +24,19 @@ html, body {
 
 #content {
   h1 {
-    @include text-shadow("3px 3px 0 #{$black}, 6px 6px 0 #{$gray}");
+    @include text-shadow("3px 3px 0 #{$white}, 6px 6px 0 #{$gray}");
     letter-spacing:-0.1em;
   }
   
   h2 {
     font-size: 5em;
     margin-bottom: 0.2em;
-    @include text-shadow("2px 2px 0 #{$black}, 4px 4px 0 #{$gray}");
+    @include text-shadow("2px 2px 0 #{$white}, 4px 4px 0 #{$gray}");
   }
 
   hr {
     height: 2px;
-    background-color: $white;
+    background-color: $black;
     border: 0px solid transparent;
     margin: 2em auto;
     width: 300px;

@@ -1,13 +1,15 @@
 #intro {
   h1 {
     .bernd   { font-size: 12.30em; }
-    .juenger { font-size: 11.00em; }
+    .juenger { font-size: 10.50em; margin-left: 0.15em; margin-bottom: 0.4em; }
     &> div {
       line-height: 0.85em;
     }
   }
   
   p {
-    &.about { font-size: 2.50em; }
+    &.hamburg { font-size: 2.65em; }
+    &.ruby { font-size: 2.60em; }
+    &.avocado { font-size: 2.10em; }
   }
 }
