@@ -10,7 +10,7 @@
         background: url("/images/white.png") repeat scroll 0 0 $white;
         color: black;
         padding: 0 4px;
-        border: 2px solid $gray;
+        border: 2px solid $gray_light;
         @include box-shadow(10px 10px 0 #000);
 
         &:hover,

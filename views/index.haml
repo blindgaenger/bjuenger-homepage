@@ -30,6 +30,11 @@
         %nav
           %ul
             = yield_content :navigation
+          #switch
+            %p.label Turn the lights off?
+            .buttons
+              %a.button.first.active(href='#') On
+              %a.button.last(href='http://blindgaenger.net/') Off
 
     - if production?
       %script(src='assets/all.js')
