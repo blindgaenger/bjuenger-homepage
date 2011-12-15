@@ -1,12 +1,14 @@
 source :rubygems
 
-gem 'sinatra', '1.1.2'
-gem 'haml', '3.0.25'
-gem 'sinatra-content-for2', '0.2.3'
-gem 'jammit', '0.6.0'
-gem 'rake', '0.9.2'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'haml'
+gem 'sass'
+gem 'jammit'
+gem 'rake'
 
 group :development do
-  gem 'sinatra-reloader', '0.5.0'
-  gem 'heroku', '2.5.0'
+  gem 'sinatra-reloader'
+  gem 'heroku'
+  gem 'foreman'
 end

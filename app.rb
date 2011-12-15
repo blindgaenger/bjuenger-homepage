@@ -1,10 +1,10 @@
 # encoding: UTF-8
 
 require 'sinatra'
+require 'sinatra/content_for'
 require 'sinatra/reloader' if development?
 require 'haml'
 require 'sass'
-require 'sinatra/content_for2'
 
 configure do
   set :haml, :format => :html5 # default Haml format is :xhtml
@@ -16,5 +16,5 @@ get '/' do
 end
 
 get '/stylesheets/:file.css' do
-  scss "stylesheets/#{params[:file]}".to_sym 
+  scss "stylesheets/#{params[:file]}".to_sym
 end
