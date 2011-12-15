@@ -34,8 +34,8 @@ namespace :assets do
 
     puts "TOTAL: #{sum.inject(0){|s,i|s+i}} bytes of #{sum.size} files"
   end
-  
-  desc "generates scss files"  
+
+  desc "generates scss files"
   task :scss do
     system <<-SCRIPT
       rm tmp/*.css
@@ -46,7 +46,7 @@ namespace :assets do
     SCRIPT
   end
 
-  desc "packages asset files with jammit"  
+  desc "packages asset files with jammit"
   task :package => :scss do
     system "rm -r public/assets/"
     require 'jammit'
@@ -54,7 +54,18 @@ namespace :assets do
   end
 end
 
-desc "deploys to heroku, after generating production assets"  
+desc "setup the heroku instance"
+task :setup do
+  system "heroku create --stack cedar"
+
+  system "heroku addons:add custom_domains"
+  #system "heroku domains:remove bjuenger.de --app old-bjuenger-homepage"
+  system "heroku domains:add bjuenger.de"
+
+  Rake::Task["deploy"].invoke
+end
+
+desc "deploys to heroku, after generating production assets"
 task :deploy do
   system "git push heroku master"
 end
