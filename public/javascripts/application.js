@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('nav a').blur().selectCurrent('[href=#' + anchorId + ']');
 
     var icon = iconMap[anchorId]
-    var attr = {fill: "315-#333:15-#202020", stroke: "#333", "stroke-width": 2}
+    var attr = {fill: "315-#111:15-#202020", stroke: "#111", "stroke-width": 2}
     $('#paper').drawIcon(icon, attr)
   });
 
