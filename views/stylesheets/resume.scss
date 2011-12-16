@@ -1,9 +1,21 @@
-#cv {
-  ul {
-    li {
-      list-style-type: disc;
-      list-style-position: outside;
-      margin: 0 0 0.5em 1.5em;
+#resume {
+
+  .markdown {
+    font-family: Oswald,sans-serif;
+
+    p {
+      margin-bottom: 1em;
+      line-height: 1.3em;
+      font-size: 1.3em;
+      text-align: justify;
     }
+
+    em {
+      color: $red;
+      font-style: normal;
+      white-space: nowrap;
+    }
+
   }
+
 }

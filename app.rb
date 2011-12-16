@@ -5,6 +5,7 @@ require 'sinatra/content_for'
 require 'sinatra/reloader' if development?
 require 'haml'
 require 'sass'
+require 'maruku'
 
 configure do
   set :haml, :format => :html5 # default Haml format is :xhtml
