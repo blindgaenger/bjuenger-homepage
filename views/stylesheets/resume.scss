@@ -1,11 +1,21 @@
 #resume {
 
-  .markdown {
-    padding: 1em;
-    background-color: $white;
+  .paper {
+    padding: 3em 1em 1em 1em;
+    background: url("/images/white.png") repeat scroll 0 0 $white;
     border: 2px solid $gray_light;
     @include border-radius("0.2em");
     font-family: Marvel,sans-serif;
+    position: relative;
+
+    #clip {
+      background: url("/images/paperclip.png") no-repeat scroll 0 0 transparent;
+      width: 100px;
+      height: 83px;
+      position: absolute;
+      top: -20px;
+      left: -18px;
+    }
 
     p {
       margin-bottom: 1em;
