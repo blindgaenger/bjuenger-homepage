@@ -6,16 +6,15 @@
     color: $gray
 
   .buttons
+    float: left
     font-size: 0.65em
     margin: 0 0 0 1em
     padding: 0
     @include border-radius(0.2em)
-
     &:hover
       @include box-shadow("0 0 0.5em 0 #{$gray}")
 
     .button
-      display: block
       float: left
       padding: 0.2em 0.4em
       line-height: 1em
