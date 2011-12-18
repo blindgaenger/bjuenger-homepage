@@ -9,9 +9,6 @@ $black: #202020
 @import "navigation.sass"
 @import "switch.sass"
 
-@import "intro.sass"
-@import "resume.sass"
-
 html, body
   background: url("/images/lightgrid.png") repeat scroll 0 0 $white
   color: $black
@@ -66,7 +63,6 @@ html, body
         text-decoration: underline
         @include text-shadow(1px 1px 0 $gray_light)
 
-
   p.readmore
     text-align: center
 
@@ -83,3 +79,8 @@ html, body
         color: $white
         @include text-shadow(2px 2px 0 $black)
         @include box-shadow(0px 0px 10px $white)
+
+// section modules
+@import "intro.sass"
+@import "resume.sass"
+@import "contact.sass"

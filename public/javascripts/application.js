@@ -3,7 +3,7 @@ $(document).ready(function() {
   var iconMap = {
     intro: 'user',
     resume: 'clip',
-    contact: 'mail'
+    contact: 'chat'
   }
 
   $("nav a[href^='#']").anchorAnimate({speed : 700});
