@@ -35,8 +35,8 @@ namespace :assets do
     puts "TOTAL: #{sum.inject(0){|s,i|s+i}} bytes of #{sum.size} files"
   end
 
-  desc "generates scss files"
-  task :scss do
+  desc "generates sass files"
+  task :sass do
     system <<-SCRIPT
       rm tmp/*.css
       cp public/stylesheets/*.css tmp/
@@ -46,7 +46,7 @@ namespace :assets do
   end
 
   desc "packages asset files with jammit"
-  task :package => :scss do
+  task :package => :sass do
     system "rm -r public/assets/"
     require 'jammit'
     Jammit.package!(:force => true)
