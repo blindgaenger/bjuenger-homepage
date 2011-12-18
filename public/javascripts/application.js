@@ -2,7 +2,8 @@ $(document).ready(function() {
 
   var iconMap = {
     intro: 'user',
-    resume: 'clip'
+    resume: 'clip',
+    contact: 'mail'
   }
 
   $("nav a[href^='#']").anchorAnimate({speed : 700});
