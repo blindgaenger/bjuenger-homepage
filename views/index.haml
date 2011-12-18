@@ -37,8 +37,9 @@
           #switch
             %p.label Turn the lights off?
             .buttons
-              %a.button.first.active(href='#') On
-              %a.button.last(href='http://blindgaenger.net/') Off
+              %a(href='http://blindgaenger.net/')
+                .button.first.active On
+                .button.last Off
 
     - if production?
       %script(src='assets/all.js')
