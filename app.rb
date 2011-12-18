@@ -17,5 +17,5 @@ get '/' do
 end
 
 get '/stylesheets/:file.css' do
-  scss "stylesheets/#{params[:file]}".to_sym
+  sass "stylesheets/#{params[:file]}".to_sym
 end

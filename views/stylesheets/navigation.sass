@@ -1,0 +1,22 @@
+#navigation
+  nav
+    font-size: 2em
+
+    li
+      margin: 20px 0
+
+      a
+        text-decoration: none
+        background: url("/images/white.png") repeat scroll 0 0 $white
+        color: black
+        padding: 0 4px
+        border: 2px solid $gray_light
+        @include box-shadow(10px 10px 0 #000)
+
+        &:hover,
+        &:focus,
+        &.current
+          background: url("/images/red.png") repeat scroll 0 0 $red
+          color: $white
+          border-color: $red
+          @include text-shadow(2px 2px 0 #000)
