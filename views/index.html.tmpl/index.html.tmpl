@@ -1,0 +1,50 @@
+{{define "content"-}}
+
+<div id="menu">
+  <div class="panel">
+    {{template "beer" .}}
+    <h1 class="name">Leffe</h1>
+    <h2 class="type">Blonde</h2><span class="price">$4.50</span><span class="abv">6.6%</span>
+  </div>
+  <div class="panel">
+    {{template "beer" .}}
+    <h1 class="name">Paulaner</h1>
+    <h2 class="type">Ale</h2><span class="price">$5</span><span class="abv">5.5%</span>
+  </div>
+  <div class="panel">
+    {{template "beer" .}}
+    <h1 class="name">Heineken</h1>
+    <h2 class="type">Lager</h2><span class="price">$4.50</span><span class="abv">5%</span>
+  </div>
+  <div class="panel">
+    {{template "beer" .}}
+    <h1 class="name">Tuborg</h1>
+    <h2 class="type">Stout</h2><span class="price">$4</span><span class="abv">4.6%</span>
+  </div>
+  <form id="order">
+    <select id="choice" name="choice">
+      <option value="leffe">Leffe</option>
+      <option value="paulaner">Paulaner</option>
+      <option value="heineken">Heineken</option>
+      <option value="tuborg">Tuborg</option>
+    </select>
+    <label for="quantity">1</label>
+    <input id="quantity" type="range" min="0.5" max="4" value="1" step="0.5" name="quantity"/>
+    <select id="table" name="table">
+      <option value="1">Table 1</option>
+      <option value="2">Table 2</option>
+      <option value="3">Table 3</option>
+      <option value="4">Table 4</option>
+      <option value="5">Table 5</option>
+      <option value="6">Table 6</option>
+      <option value="7">Table 7</option>
+      <option value="8" selected="selected">Table 8</option>
+    </select>
+    <input id="back" type="reset" value="Cancel"/>
+    <input id="submit" type="submit" value="Order"/>
+  </form>
+</div>
+
+
+
+{{-end}}

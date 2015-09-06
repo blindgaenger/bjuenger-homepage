@@ -1,0 +1,5 @@
+params:
+  title: PAGE TITLE
+  description: PAGE DESCRIPTION
+  keywords: PAGE KEYWORDS
+  baseUrl: "http://localhost:8080/"
