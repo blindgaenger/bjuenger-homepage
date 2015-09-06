@@ -12,15 +12,15 @@ body {
   display: none;
 }
 
-/* the app - a beer menu / ordering app */
+// the app - a beer menu / ordering app
 #menu {
   position: absolute;
   display: flex;
   flex-direction: column;
   top: 50%;
   left: 50%;
-  /* note: the translateZ(0) enables hardware accel */
-  /* without it, there is a weird gap between panels */
+  // note: the translateZ(0) enables hardware accel
+  // without it, there is a weird gap between panels
   transform: translate(-50%, -50%) translateZ(0);
   height: 80vh;
   width: (80vh / 1.5);
@@ -31,7 +31,7 @@ body {
     -4vh 7vh 14vh -6vh rgba(0,0,0,0.35);
 }
 
-/* the actual order form (not initially visible) */
+// the actual order form (not initially visible)
 #order {
   display: none;
   height: 20vh;
@@ -179,7 +179,7 @@ body {
   }
 }
 
-/* info panels for each beer */
+// info panels for each beer
 .panel {
   position: relative;
   flex-grow: 1;
@@ -223,7 +223,7 @@ body {
     line-height: 2.5vh;
     font-weight: 500;
   }
-  /* the icon for this beer (initially invisible) */
+  // the icon for this beer (initially invisible)
   svg {
     position: absolute;
     left: 1vh;
@@ -238,7 +238,7 @@ body {
     transition: all $animation-time ease;
     transition-delay: 0s;
   }
-  /* each panel has its own color scheme */
+  // each panel has its own color scheme
   @for $i from 1 through 4 {
     &:nth-of-type(#{$i}) {
       z-index: 10 - $i;
@@ -263,7 +263,7 @@ body {
   }
 }
 
-/* panels get larger and show more info when you hover over them */
+// panels get larger and show more info when you hover over them
 .panel:hover {
   flex-grow: 2;
   .name {
@@ -284,7 +284,7 @@ body {
   }
 }
 
-/* when you click on a panel, the others are hidden */
+// when you click on a panel, the others are hidden
 .panel.hidden {
   flex-grow: 0.0000000001;
   * {
@@ -293,7 +293,7 @@ body {
   }
 }
 
-/* when you click on a panel, it becomes active */
+// when you click on a panel, it becomes active
 .panel.active {
   flex-grow: 1;
   transition-delay: 0s;
@@ -335,7 +335,7 @@ body {
 }
 
 @media (orientation: landscape) {
-  /* put a blurred image in the background, just for pretty presentation */
+  // put a blurred image in the background, just for pretty presentation
   body::before {
     content: '';
     display: block;
