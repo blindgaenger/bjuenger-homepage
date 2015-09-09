@@ -68,14 +68,20 @@ header {
   text-transform: uppercase;
   text-align: center;
 
-  p {
+  .person__job {
     margin-top: 5vh;
     margin-bottom: 2.5vh;
     font-size: 2.5vh;
     color: $colorDark;
+
+    &:before,
+    &:after {
+      content: "\2014";
+      margin: 0.5em;
+    }
   }
 
-  h1 {
+  .person__name {
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
     font-size: 5vh;
