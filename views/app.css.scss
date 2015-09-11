@@ -55,49 +55,27 @@ body {
   box-shadow: 2vh 3vh 17vh -4vh rgba(0,0,0,0.40);
 }
 
-// fullscreen card
-@media (max-aspect-ratio: 3/4) {
-  #card {
-    width: 100%;
-    height: 100%;
-    border-radius: 0;
-  }
-}
-
 #cover {
-  width: $coverWidth;
-  height: $coverHeight;
-  overflow: hidden;
-  filter: drop-shadow(0 0 0.5vh darken($colorBlack, 20%));
-
   position: absolute;
   top: 0;
   right: 0;
-
-  transition:
-    top $animation-time ease,
-    right $animation-time ease,
-    width $animation-time ease,
-    height $animation-time ease;
+  width: $coverWidth;
+  height: $coverHeight;
+  overflow: hidden;
+  //filter: drop-shadow(0 0 0.5vh darken($colorBlack, 20%));
+  box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.25) inset, 0px 3px 6px rgba(0, 0, 0, 0.2);
 
   .image {
     object-fit: cover;
     width: $coverWidth;
     height: $coverHeight;
-    transition:
-      width $animation-time ease,
-      height $animation-time ease;
   }
 }
 
 header {
   padding-top: $coverHeight;
-
   text-transform: uppercase;
   text-align: center;
-
-  transition:
-    padding-top $animation-time ease $animation-time;
 
   .person__job {
     margin-top: 5vh;
@@ -223,6 +201,7 @@ header {
   border-bottom: 2px solid red;
 }
 
+/*
 #card.show-description {
   // animate a circle in the top right corner
   #cover {
@@ -248,4 +227,163 @@ header {
     height: 0;
   }
 }
+*/
+
+
+/*
+.show-description {
+  animation-name: foobar;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+}
+@keyframes foobar {
+  from { background-color: red; }
+  to { background-color: green; }
+}
+*/
+
+#card.show-introduction {
+  animation: goGreenRed 1s;
+  animation-fill-mode: backwards;
+}
+
+#card.show-description {
+  animation: goRedGreen 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes goGreenRed {
+  from { background-color: green; }
+  to   { background-color: red; }
+}
+
+@keyframes goRedGreen {
+  from { background-color: red; }
+  to   { background-color: green; }
+}
+
+
+
+.card--introduction {
+  #cover {
+    animation: coverToCircle $animation-time forwards;
+  }
+  .image {
+    animation: imageToCircle $animation-time forwards;
+  }
+
+  header {
+    animation: headerToTop $animation-time forwards $animation-time;
+  }
+}
+
+.card--description {
+  #cover {
+    animation: circleToCover $animation-time backwards $animation-time;
+  }
+  .image {
+    animation: circleToImage $animation-time backwards $animation-time;
+  }
+  header {
+    animation: headerToBottom $animation-time backwards;
+  }
+}
+
+
+// move the cover to a circle in the top right corner
+@keyframes coverToCircle {
+  from {
+    top: 0;
+    right: 0;
+    width: $coverWidth;
+    height: $coverHeight;
+    border-radius: none;
+  }
+  to   {
+    top: 2vh;
+    right: 2vh;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 3vh;
+  }
+}
+@keyframes circleToCover {
+  from {
+    top: 2vh;
+    right: 2vh;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 3vh;
+  }
+  to   {
+    top: 0;
+    right: 0;
+    width: $coverWidth;
+    height: $coverHeight;
+    border-radius: none;
+  }
+}
+
+// resize the image to fit in the circle
+@keyframes imageToCircle {
+  from {
+    width: $coverWidth;
+    height: $coverHeight;
+  }
+  to   {
+    width: 7vh;
+    height: 7vh;
+  }
+}
+@keyframes circleToImage {
+  from {
+    width: 7vh;
+    height: 7vh;
+  }
+  to   {
+    width: $coverWidth;
+    height: $coverHeight;
+  }
+}
+
+// move the header up
+@keyframes headerToTop {
+  from {
+    padding-top: $coverHeight;
+  }
+  to   {
+    padding-top: 0;
+  }
+}
+@keyframes headerToBottom {
+  from {
+    padding-top: 0;
+  }
+  to   {
+    padding-top: $coverHeight;
+  }
+}
+
+
+// fullscreen card
+@media (max-aspect-ratio: 3/4) {
+  #card {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  #cover {
+    width: 100%;
+
+    .image {
+      width: 100%;
+    }
+  }
+
+}
+
+
 

@@ -7,13 +7,11 @@ body { display: -webkit-flex; display: -ms-flexbox; display: -moz-box; display: 
 
 #card { position: relative; width: 50vh; height: 90vh; overflow: hidden; background-color: #FFFFFF; color: #4A4A4A; border-radius: 0.6vh; box-shadow: 2vh 3vh 17vh -4vh rgba(0, 0, 0, 0.4); }
 
-@media (max-aspect-ratio: 3 / 4) { #card { width: 100%; height: 100%; border-radius: 0; } }
+#cover { position: absolute; top: 0; right: 0; width: 50vh; height: 25vh; overflow: hidden; box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.25) inset, 0px 3px 6px rgba(0, 0, 0, 0.2); }
 
-#cover { width: 50vh; height: 25vh; overflow: hidden; filter: drop-shadow(0 0 0.5vh #171717); position: absolute; top: 0; right: 0; transition: top 0.3s ease, right 0.3s ease, width 0.3s ease, height 0.3s ease; }
+#cover .image { object-fit: cover; width: 50vh; height: 25vh; }
 
-#cover .image { object-fit: cover; width: 50vh; height: 25vh; transition: width 0.3s ease, height 0.3s ease; }
-
-header { padding-top: 25vh; text-transform: uppercase; text-align: center; transition: padding-top 0.3s ease 0.3s; }
+header { padding-top: 25vh; text-transform: uppercase; text-align: center; }
 
 header .person__job { margin-top: 5vh; margin-bottom: 2.5vh; font-size: 2.5vh; color: #9B9B9B; }
 
@@ -55,10 +53,68 @@ header .person__name { margin-top: 2.5vh; margin-bottom: 2.5vh; font-size: 5vh; 
 
 #description { display: none; background-color: green; border-top: 2px solid red; border-bottom: 2px solid red; }
 
-#card.show-description #cover { top: 2vh; right: 2vh; width: 6vh; height: 6vh; border-radius: 3vh; }
+/* #card.show-description { // animate a circle in the top right corner #cover { top: 2vh; right: 2vh; width: 6vh; height: 6vh; border-radius: 3vh; // resize the image to fit in the circle .image { width: 7vh; height: 7vh; } } header { padding-top: 0; } #introduction .introduction__text { padding: 0; height: 0; } } */
+/* .show-description { animation-name: foobar; animation-duration: 1s; animation-fill-mode: both; animation-iteration-count: 1; animation-direction: normal; } @keyframes foobar { from { background-color: red; } to { background-color: green; } } */
+#card.show-introduction { animation: goGreenRed 1s; animation-fill-mode: backwards; }
 
-#card.show-description #cover .image { width: 7vh; height: 7vh; }
+#card.show-description { animation: goRedGreen 1s; animation-fill-mode: forwards; }
 
-#card.show-description header { padding-top: 0; }
+@keyframes goGreenRed { from { background-color: green; }
+  to { background-color: red; } }
 
-#card.show-description #introduction .introduction__text { padding: 0; height: 0; }
+@keyframes goRedGreen { from { background-color: red; }
+  to { background-color: green; } }
+
+.card--introduction #cover { animation: coverToCircle 0.3s forwards; }
+
+.card--introduction .image { animation: imageToCircle 0.3s forwards; }
+
+.card--introduction header { animation: headerToTop 0.3s forwards 0.3s; }
+
+.card--description #cover { animation: circleToCover 0.3s backwards 0.3s; }
+
+.card--description .image { animation: circleToImage 0.3s backwards 0.3s; }
+
+.card--description header { animation: headerToBottom 0.3s backwards; }
+
+@keyframes coverToCircle { from { top: 0;
+    right: 0;
+    width: 50vh;
+    height: 25vh;
+    border-radius: none; }
+  to { top: 2vh;
+    right: 2vh;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 3vh; } }
+
+@keyframes circleToCover { from { top: 2vh;
+    right: 2vh;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 3vh; }
+  to { top: 0;
+    right: 0;
+    width: 50vh;
+    height: 25vh;
+    border-radius: none; } }
+
+@keyframes imageToCircle { from { width: 50vh;
+    height: 25vh; }
+  to { width: 7vh;
+    height: 7vh; } }
+
+@keyframes circleToImage { from { width: 7vh;
+    height: 7vh; }
+  to { width: 50vh;
+    height: 25vh; } }
+
+@keyframes headerToTop { from { padding-top: 25vh; }
+  to { padding-top: 0; } }
+
+@keyframes headerToBottom { from { padding-top: 0; }
+  to { padding-top: 25vh; } }
+
+@media (max-aspect-ratio: 3 / 4) { #card { width: 100%; height: 100%; border-radius: 0; }
+  #cover { width: 100%; }
+  #cover .image { width: 100%; } }
