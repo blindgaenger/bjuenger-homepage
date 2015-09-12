@@ -1,15 +1,15 @@
-console.log("YAY")
+console.log("YAY");
 
 $(function() {
 
   $('.introduction__more').click(function() {
 
-    if ($('#card').hasClass('card--introduction')) {
-      $('#card').removeClass('card--introduction').addClass('card--description');
-    } else {
+    if ($('#card').hasClass('card--description')) {
       $('#card').removeClass('card--description').addClass('card--introduction');
+    } else {
+      $('#card').removeClass('card--introduction').addClass('card--description');
     }
 
   });
 
-})
+});

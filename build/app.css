@@ -54,28 +54,18 @@ header .person__name { margin-top: 2.5vh; margin-bottom: 2.5vh; font-size: 5vh; 
 #description { display: none; background-color: green; border-top: 2px solid red; border-bottom: 2px solid red; }
 
 /* #card.show-description { // animate a circle in the top right corner #cover { top: 2vh; right: 2vh; width: 6vh; height: 6vh; border-radius: 3vh; // resize the image to fit in the circle .image { width: 7vh; height: 7vh; } } header { padding-top: 0; } #introduction .introduction__text { padding: 0; height: 0; } } */
-/* .show-description { animation-name: foobar; animation-duration: 1s; animation-fill-mode: both; animation-iteration-count: 1; animation-direction: normal; } @keyframes foobar { from { background-color: red; } to { background-color: green; } } */
-#card.show-introduction { animation: goGreenRed 1s; animation-fill-mode: backwards; }
+/* .show-description { animation-name: foobar; animation-duration: 1s; animation-fill-mode: both; animation-iteration-count: 1; animation-direction: normal; } @keyframes foobar { from { background-color: red; } to { background-color: green; } } #card.show-introduction { animation: goGreenRed 1s; animation-fill-mode: backwards; } #card.show-description { animation: goRedGreen 1s; animation-fill-mode: forwards; } @keyframes goGreenRed { from { background-color: green; } to   { background-color: red; } } @keyframes goRedGreen { from { background-color: red; } to   { background-color: green; } } */
+.card--introduction #cover { animation: circleToCover 0.3s backwards 0.3s; }
 
-#card.show-description { animation: goRedGreen 1s; animation-fill-mode: forwards; }
+.card--introduction .image { animation: circleToImage 0.3s backwards 0.3s; }
 
-@keyframes goGreenRed { from { background-color: green; }
-  to { background-color: red; } }
+.card--introduction header { animation: headerToBottom 0.3s backwards; }
 
-@keyframes goRedGreen { from { background-color: red; }
-  to { background-color: green; } }
+.card--description #cover { animation: coverToCircle 0.3s forwards; }
 
-.card--introduction #cover { animation: coverToCircle 0.3s forwards; }
+.card--description .image { animation: imageToCircle 0.3s forwards; }
 
-.card--introduction .image { animation: imageToCircle 0.3s forwards; }
-
-.card--introduction header { animation: headerToTop 0.3s forwards 0.3s; }
-
-.card--description #cover { animation: circleToCover 0.3s backwards 0.3s; }
-
-.card--description .image { animation: circleToImage 0.3s backwards 0.3s; }
-
-.card--description header { animation: headerToBottom 0.3s backwards; }
+.card--description header { animation: headerToTop 0.3s forwards 0.3s; }
 
 @keyframes coverToCircle { from { top: 0;
     right: 0;

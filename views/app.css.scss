@@ -242,7 +242,6 @@ header {
   from { background-color: red; }
   to { background-color: green; }
 }
-*/
 
 #card.show-introduction {
   animation: goGreenRed 1s;
@@ -263,10 +262,22 @@ header {
   from { background-color: red; }
   to   { background-color: green; }
 }
-
+*/
 
 
 .card--introduction {
+  #cover {
+    animation: circleToCover $animation-time backwards $animation-time;
+  }
+  .image {
+    animation: circleToImage $animation-time backwards $animation-time;
+  }
+  header {
+    animation: headerToBottom $animation-time backwards;
+  }
+}
+
+.card--description {
   #cover {
     animation: coverToCircle $animation-time forwards;
   }
@@ -276,18 +287,6 @@ header {
 
   header {
     animation: headerToTop $animation-time forwards $animation-time;
-  }
-}
-
-.card--description {
-  #cover {
-    animation: circleToCover $animation-time backwards $animation-time;
-  }
-  .image {
-    animation: circleToImage $animation-time backwards $animation-time;
-  }
-  header {
-    animation: headerToBottom $animation-time backwards;
   }
 }
 
