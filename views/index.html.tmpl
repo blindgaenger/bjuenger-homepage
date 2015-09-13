@@ -1,57 +1,58 @@
 {{define "content"-}}
 
-<div class="card card--description" itemscope itemtype="http://schema.org/Person">
-
-  <div class="cover">
-    <img class="cover__image" src="images/me.png" alt="Bernd Jünger">
-  </div>
+<div class="card" itemscope itemtype="http://schema.org/Person">
 
   <header class="person">
+    <img class="person__image" src="images/me.png" alt="Bernd Jünger">
     <p class="person__job" itemprop="jobTitle">Developer</p>
     <h1 class="person__name" itemprop="name">Bernd Jünger</h1>
-    <div class="person__socials">
+  </header>
+
+  <main>
+    <section class="social">
       <ul>
         <li>
-          <a class="icon twitter" href="https://www.twitter.com/blindgaenger" title="twitter profile">
+          <a class="social__icon social__icon--twitter" href="https://www.twitter.com/blindgaenger" title="twitter profile">
             <span class="label">Twitter</span>
           </a>
         </li>
         <li>
-          <a class="icon github" href="https://github.com/blindgaenger" title="github profile">
+          <a class="social__icon social__icon--github" href="https://github.com/blindgaenger" title="github profile">
             <span class="label">Github</span>
           </a>
         </li>
         <li>
-          <a class="icon mail" href="mailto:mail@bjuenger.de" title="mail address">
+          <a class="social__icon social__icon--mail" href="mailto:mail@bjuenger.de" title="mail address">
             <span class="label">Mail</span>
           </a>
         </li>
         <li>
-          <a class="icon xing" href="https://www.xing.com/profile/Bernd_Juenger" title="xing profile">
+          <a class="social__icon social__icon--xing" href="https://www.xing.com/profile/Bernd_Juenger" title="xing profile">
             <span class="label">Xing</span>
           </a>
         </li>
       </ul>
-    </div>
-  </header>
+    </section>
 
-  <div class="introduction">
-    <div class="introduction__text">
-      <p class="introduction__text--hamburg">Lebe momentan in Hamburg</p>
-      <p class="introduction__text--software">Entwickle Software für das Web</p>
-      <p class="introduction__text--happy">Happy to be me!</p>
-    </div>
-    <a  class="introduction__more" href="#description">READ MORE</a>
-  </div>
+    <section class="intro" itemprop="description">
+      <p class="intro__hamburg">Lebe momentan in Hamburg</p>
+      <p class="intro__software">Entwickle Software für das Web</p>
+      <p class="intro__happy">Happy to be me!</p>
+    </section>
 
-  <div class="description" itemprop="description">
-    <p>Löse Probleme gerne mit Software, baue also Anwendungen, schiele öfter mal in Richtung Web-Design, aber meistens schreibe und teste ich Code und setze das Ganze auf einem Server auf.</p>
-    <p>Habe Informatik in Karlsruhe studiert, danach viel Erfahrung im E-Commerce Shopping Bereich gesammelt, später auch in einem Hamburger Startup und bin jetzt bei einem Agilen Dienstleister.</p>
-    <p>Mag die Analyse von Workflows und die Konzeption von Software-Systemen, habe kleinere Teams angeleitet, aber zuviele Diplomarbeiten betreut.</p>
-    <p>Liebe Ruby mit und ohne Rails, habe früher viel Java getrunken, und bin begeistert was gerade mit Javascript passiert.</p>
-    <p>Notiere alles in Markdown, versioniere noch mehr mit Git, kann nicht ohne meine ZSH leben und bin momentan mit Sublime Text 2 zufrieden.</p>
-    <p>Bastel ein paar Dinge in meiner Freizeit, bin aber trotzdem gerne mal Offline unterwegs.</p>
-  </div>
+    <section class="about">
+      <p>Löse Probleme gerne mit Software, baue also Anwendungen, schiele öfter mal in Richtung Web-Design, aber meistens schreibe und teste ich Code und setze das Ganze auf einem Server auf.</p>
+      <p>Habe Informatik in Karlsruhe studiert, danach viel Erfahrung im E-Commerce Shopping Bereich gesammelt, später auch in einem Hamburger Startup und bin jetzt bei einem Agilen Dienstleister.</p>
+      <p>Mag die Analyse von Workflows und die Konzeption von Software-Systemen, habe kleinere Teams angeleitet, aber zuviele Diplomarbeiten betreut.</p>
+      <p>Liebe Ruby mit und ohne Rails, habe früher viel Java getrunken, und bin begeistert was gerade mit Javascript passiert.</p>
+      <p>Notiere alles in Markdown, versioniere noch mehr mit Git, kann nicht ohne meine ZSH leben und bin momentan mit Sublime Text 2 zufrieden.</p>
+      <p>Bastel ein paar Dinge in meiner Freizeit, bin aber trotzdem gerne mal Offline unterwegs.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>The end.</div>
+  </footer>
 
 </div>
 {{-end}}
