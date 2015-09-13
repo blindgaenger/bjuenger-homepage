@@ -1,5 +1,5 @@
 params:
-  title: PAGE TITLE
-  description: PAGE DESCRIPTION
-  keywords: PAGE KEYWORDS
+  title: Bernd Jünger
+  description: Web Developer aus Hamburg
+  keywords: Bernd Jünger, Hamburg, Web Developer, Web Entwickler
   baseUrl: "http://localhost:8080/"
