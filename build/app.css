@@ -5,106 +5,73 @@ html, body { width: 100%; height: 100%; }
 
 body { display: -webkit-flex; display: -ms-flexbox; display: -moz-box; display: flex; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center; justify-content: center; font-family: 'Roboto', sans-serif; font-weight: 300; background-color: #FAFAFA; }
 
-#card { position: relative; width: 50vh; height: 90vh; overflow: hidden; background-color: #FFFFFF; color: #4A4A4A; border-radius: 0.6vh; box-shadow: 2vh 3vh 17vh -4vh rgba(0, 0, 0, 0.4); }
+.card { position: relative; width: 50vh; height: 90vh; overflow: hidden; background-color: #FFFFFF; color: #4A4A4A; border-radius: 0.6vh; box-shadow: 2vh 3vh 17vh -4vh rgba(0, 0, 0, 0.4); }
 
-#cover { position: absolute; top: 0; right: 0; width: 50vh; height: 25vh; overflow: hidden; box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.25) inset, 0px 3px 6px rgba(0, 0, 0, 0.2); }
+.cover { position: absolute; top: 0; right: 0; width: 50vh; height: 25vh; overflow: hidden; box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.25) inset, 0px 3px 6px rgba(0, 0, 0, 0.2); }
 
-#cover .image { object-fit: cover; width: 50vh; height: 25vh; }
+.cover__image { object-fit: cover; width: 50vh; height: 25vh; }
 
-header { padding-top: 25vh; text-transform: uppercase; text-align: center; }
+.person { padding-top: 25vh; text-transform: uppercase; text-align: center; }
 
-header .person__job { margin-top: 5vh; margin-bottom: 2.5vh; font-size: 2.5vh; color: #9B9B9B; }
+.person__job { margin-top: 5vh; margin-bottom: 2.5vh; font-size: 2.5vh; color: #9B9B9B; }
 
-header .person__job:before, header .person__job:after { content: "\2014"; margin: 0.5em; }
+.person__job:before, .person__job:after { content: "\2014"; margin: 0.5em; }
 
-header .person__name { margin-top: 2.5vh; margin-bottom: 2.5vh; font-size: 5vh; color: #4A4A4A; font-weight: 300; }
+.person__name { margin-top: 2.5vh; margin-bottom: 2.5vh; font-size: 5vh; color: #4A4A4A; font-weight: 300; }
 
-#socials { width: 50%; margin: 0 auto; font-size: 3vh; }
+.person__socials { width: 50%; margin: 0 auto; font-size: 3vh; }
 
-#socials ul { display: -webkit-flex; display: -ms-flexbox; display: -moz-box; display: flex; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; padding: 0; margin: 0; list-style: none; }
+.person__socials ul { display: -webkit-flex; display: -ms-flexbox; display: -moz-box; display: flex; -webkit-align-items: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; justify-content: space-between; padding: 0; margin: 0; list-style: none; }
 
-#socials a { display: inline-block; width: 5vh; height: 5vh; line-height: 5vh; text-align: center; text-decoration: none; color: #4A4A4A; border-radius: 50%; transition: all 0.3s ease; transition-delay: 0; }
+.person__socials a { display: inline-block; width: 5vh; height: 5vh; line-height: 5vh; text-align: center; text-decoration: none; color: #4A4A4A; border-radius: 50%; transition: all 0.3s ease; transition-delay: 0; }
 
-#socials a:hover { background-color: #4A4A4A; color: #FFFFFF; }
+.person__socials a:hover { background-color: #4A4A4A; color: #FFFFFF; }
 
-#socials .label { display: none; }
+.person__socials .label { display: none; }
 
-#socials .icon { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; }
+.person__socials .icon { display: inline-block; font-family: FontAwesome; font-style: normal; font-weight: normal; }
 
-#socials .icon.twitter::before { font-size: 3vh; content: ""; }
+.person__socials .icon.twitter::before { font-size: 3vh; content: ""; }
 
-#socials .icon.github::before { font-size: 3vh; content: ""; }
+.person__socials .icon.github::before { font-size: 3vh; content: ""; }
 
-#socials .icon.mail::before { font-size: 2.5vh; content: ""; }
+.person__socials .icon.mail::before { font-size: 2.5vh; content: ""; }
 
-#socials .icon.xing::before { font-size: 2.5vh; content: ""; }
+.person__socials .icon.xing::before { font-size: 2.5vh; content: ""; }
 
-#introduction .introduction__text { width: 50%; margin: 4vh auto; padding: 3vh 0 4vh 0; border-color: #D1D1D1; border-style: double; border-width: medium 0; text-align: center; line-height: 5vh; overflow: hidden; height: 15vh; transition: all 0.3s ease; transition-delay: 0; }
+.introduction { width: 50%; margin: 0 auto; }
 
-#introduction .introduction__text--hamburg { font-size: 2.05vh; }
+.introduction__text { margin: 4vh 0; padding: 3vh 0; border-color: #D1D1D1; border-style: double; border-width: medium 0; text-align: center; line-height: 5vh; overflow: hidden; }
 
-#introduction .introduction__text--software { font-size: 2.15vh; }
+.introduction__text--hamburg { font-size: 2.05vh; }
 
-#introduction .introduction__text--happy { font-size: 3.45vh; }
+.introduction__text--software { font-size: 2.15vh; }
 
-#introduction .introduction__more { display: block; width: 15vh; margin: 0 auto; padding: 1vh; border: 2px solid #9B9B9B; border-radius: 0.3vh; font-size: 2vh; font-weight: 400; text-decoration: none; text-align: center; color: #9B9B9B; transition: all 0.3s ease; transition-delay: 0; }
+.introduction__text--happy { font-size: 3.45vh; padding: 0.6vh 0; }
 
-#introduction .introduction__more:hover { background-color: #9B9B9B; color: #FFFFFF; }
+.introduction__more { display: block; width: 15vh; margin: 0 auto; padding: 1vh; border: 2px solid #9B9B9B; border-radius: 0.3vh; font-size: 2vh; font-weight: 400; text-decoration: none; text-align: center; color: #9B9B9B; transition: all 0.3s ease; transition-delay: 0; }
 
-#description { display: none; background-color: green; border-top: 2px solid red; border-bottom: 2px solid red; }
+.introduction__more:hover { background-color: #9B9B9B; color: #FFFFFF; }
 
-/* #card.show-description { // animate a circle in the top right corner #cover { top: 2vh; right: 2vh; width: 6vh; height: 6vh; border-radius: 3vh; // resize the image to fit in the circle .image { width: 7vh; height: 7vh; } } header { padding-top: 0; } #introduction .introduction__text { padding: 0; height: 0; } } */
-/* .show-description { animation-name: foobar; animation-duration: 1s; animation-fill-mode: both; animation-iteration-count: 1; animation-direction: normal; } @keyframes foobar { from { background-color: red; } to { background-color: green; } } #card.show-introduction { animation: goGreenRed 1s; animation-fill-mode: backwards; } #card.show-description { animation: goRedGreen 1s; animation-fill-mode: forwards; } @keyframes goGreenRed { from { background-color: green; } to   { background-color: red; } } @keyframes goRedGreen { from { background-color: red; } to   { background-color: green; } } */
-.card--introduction #cover { animation: circleToCover 0.3s backwards 0.3s; }
+.description { width: 80%; height: 60vh; margin: 2.5vh auto; overflow: scroll; }
 
-.card--introduction .image { animation: circleToImage 0.3s backwards 0.3s; }
+.description p { margin: 1em; font-size: 1em; text-align: justify; }
 
-.card--introduction header { animation: headerToBottom 0.3s backwards; }
+.card--introduction .introduction { display: block; }
 
-.card--description #cover { animation: coverToCircle 0.3s forwards; }
+.card--introduction .description { display: none; }
 
-.card--description .image { animation: imageToCircle 0.3s forwards; }
+.card--description .cover { top: 2vh; right: 2vh; width: 6vh; height: 6vh; border-radius: 3vh; cursor: pointer; }
 
-.card--description header { animation: headerToTop 0.3s forwards 0.3s; }
+.card--description .cover__image { width: 7vh; height: 7vh; }
 
-@keyframes coverToCircle { from { top: 0;
-    right: 0;
-    width: 50vh;
-    height: 25vh;
-    border-radius: none; }
-  to { top: 2vh;
-    right: 2vh;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 3vh; } }
+.card--description .person { padding-top: 0; }
 
-@keyframes circleToCover { from { top: 2vh;
-    right: 2vh;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 3vh; }
-  to { top: 0;
-    right: 0;
-    width: 50vh;
-    height: 25vh;
-    border-radius: none; } }
+.card--description .introduction { display: none; }
 
-@keyframes imageToCircle { from { width: 50vh;
-    height: 25vh; }
-  to { width: 7vh;
-    height: 7vh; } }
+.card--description .description { display: block; }
 
-@keyframes circleToImage { from { width: 7vh;
-    height: 7vh; }
-  to { width: 50vh;
-    height: 25vh; } }
-
-@keyframes headerToTop { from { padding-top: 25vh; }
-  to { padding-top: 0; } }
-
-@keyframes headerToBottom { from { padding-top: 0; }
-  to { padding-top: 25vh; } }
-
-@media (max-aspect-ratio: 3 / 4) { #card { width: 100%; height: 100%; border-radius: 0; }
-  #cover { width: 100%; }
-  #cover .image { width: 100%; } }
+/* .card--introduction { .cover { animation: circleToCover $animation-time backwards $animation-time; } .cover__image { animation: circleToImage $animation-time backwards $animation-time; } .person { animation: headerToBottom $animation-time backwards; } } .card--description { .cover { animation: coverToCircle $animation-time forwards; } .cover__image { animation: imageToCircle $animation-time forwards; } .person { animation: headerToTop $animation-time forwards $animation-time; } } // move the cover to a circle in the top right corner @keyframes coverToCircle { // from { //   top: 0; //   right: 0; //   width: $coverWidth; //   height: $coverHeight; //   border-radius: none; // } to   { top: 2vh; right: 2vh; width: 6vh; height: 6vh; border-radius: 3vh; } } @keyframes circleToCover { // from { //   top: 2vh; //   right: 2vh; //   width: 6vh; //   height: 6vh; //   border-radius: 3vh; // } to   { top: 0; right: 0; width: $coverWidth; height: $coverHeight; border-radius: none; } } // resize the image to fit in the circle @keyframes imageToCircle { from { width: $coverWidth; height: $coverHeight; } to   { width: 7vh; height: 7vh; } } @keyframes circleToImage { from { width: 7vh; height: 7vh; } to   { width: $coverWidth; height: $coverHeight; } } // move the header up @keyframes headerToTop { from { padding-top: $coverHeight; } to   { padding-top: 0; } } @keyframes headerToBottom { from { padding-top: 0; } to   { padding-top: $coverHeight; } } */
+@media (max-aspect-ratio: 3 / 4) { .card { width: 100%; height: 100%; border-radius: 0; }
+  .cover { width: 100%; }
+  .cover__image { width: 100%; } }

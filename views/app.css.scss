@@ -43,7 +43,7 @@ body {
   background-color: $colorLight;
 }
 
-#card {
+.card {
   position: relative;
   width: $cardWidth;
   height: $cardHeight;
@@ -55,51 +55,56 @@ body {
   box-shadow: 2vh 3vh 17vh -4vh rgba(0,0,0,0.40);
 }
 
-#cover {
+/////////////////////////////
+
+.cover {
   position: absolute;
   top: 0;
   right: 0;
   width: $coverWidth;
   height: $coverHeight;
   overflow: hidden;
+
   //filter: drop-shadow(0 0 0.5vh darken($colorBlack, 20%));
   box-shadow: 0px 3px 0px rgba(255, 255, 255, 0.25) inset, 0px 3px 6px rgba(0, 0, 0, 0.2);
-
-  .image {
-    object-fit: cover;
-    width: $coverWidth;
-    height: $coverHeight;
-  }
 }
 
-header {
+.cover__image {
+  object-fit: cover;
+  width: $coverWidth;
+  height: $coverHeight;
+}
+
+/////////////////////////////
+
+.person {
   padding-top: $coverHeight;
   text-transform: uppercase;
   text-align: center;
+}
 
-  .person__job {
-    margin-top: 5vh;
-    margin-bottom: 2.5vh;
-    font-size: 2.5vh;
-    color: $colorDark;
+.person__job {
+  margin-top: 5vh;
+  margin-bottom: 2.5vh;
+  font-size: 2.5vh;
+  color: $colorDark;
 
-    &:before,
-    &:after {
-      content: "\2014";
-      margin: 0.5em;
-    }
-  }
-
-  .person__name {
-    margin-top: 2.5vh;
-    margin-bottom: 2.5vh;
-    font-size: 5vh;
-    color: $colorBlack;
-    font-weight: 300;
+  &:before,
+  &:after {
+    content: "\2014";
+    margin: 0.5em;
   }
 }
 
-#socials {
+.person__name {
+  margin-top: 2.5vh;
+  margin-bottom: 2.5vh;
+  font-size: 5vh;
+  color: $colorBlack;
+  font-weight: 300;
+}
+
+.person__socials {
   width: 50%;
   margin: 0 auto;
   font-size: 3vh;
@@ -147,159 +152,154 @@ header {
   }
 }
 
-#introduction {
-  .introduction__text {
-    width: 50%;
-    margin: 4vh auto;
-    padding: 3vh 0 4vh 0;
-    border-color: $colorNormal;
-    border-style: double;
-    border-width: medium 0;
-    text-align: center;
-    line-height: 5vh;
-    overflow: hidden;
+/////////////////////////////
 
-    height: 15vh;
-    transition: all $animation-time ease;
-    transition-delay: 0;
+.introduction {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.introduction__text {
+  margin: 4vh 0;
+  padding: 3vh 0;
+  border-color: $colorNormal;
+  border-style: double;
+  border-width: medium 0;
+  text-align: center;
+  line-height: 5vh;
+  overflow: hidden;
+}
+.introduction__text--hamburg  { font-size: 2.05vh; }
+.introduction__text--software { font-size: 2.15vh; }
+.introduction__text--happy    { font-size: 3.45vh; padding: 0.6vh 0; }
+
+.introduction__more {
+  display: block;
+  width: 15vh;
+  margin: 0 auto;
+  padding: 1vh;
+
+  border: 2px solid $colorDark;
+  border-radius: 0.3vh;
+
+  font-size: 2vh;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  color: $colorDark;
+
+  transition: all $animation-time ease;
+  transition-delay: 0;
+
+  &:hover {
+    background-color: $colorDark;
+    color: $colorWhite;
   }
-  .introduction__text--hamburg  { font-size: 2.05vh; }
-  .introduction__text--software { font-size: 2.15vh; }
-  .introduction__text--happy    { font-size: 3.45vh; }
+}
 
-  .introduction__more {
+/////////////////////////////
+
+.description {
+  width: 80%;
+  height: 60vh;
+  margin: 2.5vh auto;
+  overflow: scroll;
+
+  // &::before, &::after {
+  //   content: "";
+  //   display: block;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   height: 1px;
+  //   margin-top: 5px;
+  //   background: $colorNormal none repeat scroll 0% 0%;
+  //   width: 50%;
+  // }
+
+  p {
+    margin: 1em;
+    font-size: 1em;
+    text-align: justify;
+  }
+}
+
+/////////////////////////////////////
+
+.card--introduction {
+  .introduction {
     display: block;
-    width: 15vh;
-    margin: 0 auto;
-    padding: 1vh;
+  }
 
-    border: 2px solid $colorDark;
-    border-radius: 0.3vh;
-
-    font-size: 2vh;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: center;
-    color: $colorDark;
-
-    transition: all $animation-time ease;
-    transition-delay: 0;
-
-    &:hover {
-      background-color: $colorDark;
-      color: $colorWhite;
-    }
+  .description {
+    display: none;
   }
 }
 
-#description {
-  display: none;
-
-  background-color: green;
-  // height: 50%;
-  border-top: 2px solid red;
-  border-bottom: 2px solid red;
-}
-
-/*
-#card.show-description {
-  // animate a circle in the top right corner
-  #cover {
+.card--description {
+  .cover {
     top: 2vh;
     right: 2vh;
     width: 6vh;
     height: 6vh;
     border-radius: 3vh;
-
-    // resize the image to fit in the circle
-    .image {
-      width: 7vh;
-      height: 7vh;
-    }
+    cursor: pointer;
+  }
+  .cover__image {
+    width: 7vh;
+    height: 7vh;
   }
 
-  header {
+  .person {
     padding-top: 0;
   }
 
-  #introduction .introduction__text {
-    padding: 0;
-    height: 0;
+  .introduction {
+    display: none;
+  }
+
+  .description {
+    display: block;
   }
 }
-*/
 
 
 /*
-.show-description {
-  animation-name: foobar;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-}
-@keyframes foobar {
-  from { background-color: red; }
-  to { background-color: green; }
-}
-
-#card.show-introduction {
-  animation: goGreenRed 1s;
-  animation-fill-mode: backwards;
-}
-
-#card.show-description {
-  animation: goRedGreen 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes goGreenRed {
-  from { background-color: green; }
-  to   { background-color: red; }
-}
-
-@keyframes goRedGreen {
-  from { background-color: red; }
-  to   { background-color: green; }
-}
-*/
-
-
 .card--introduction {
-  #cover {
+  .cover {
     animation: circleToCover $animation-time backwards $animation-time;
   }
-  .image {
+  .cover__image {
     animation: circleToImage $animation-time backwards $animation-time;
   }
-  header {
+  .person {
     animation: headerToBottom $animation-time backwards;
   }
 }
 
 .card--description {
-  #cover {
+  .cover {
     animation: coverToCircle $animation-time forwards;
   }
-  .image {
+  .cover__image {
     animation: imageToCircle $animation-time forwards;
   }
 
-  header {
+  .person {
     animation: headerToTop $animation-time forwards $animation-time;
   }
 }
 
 
+
 // move the cover to a circle in the top right corner
 @keyframes coverToCircle {
-  from {
-    top: 0;
-    right: 0;
-    width: $coverWidth;
-    height: $coverHeight;
-    border-radius: none;
-  }
+  // from {
+  //   top: 0;
+  //   right: 0;
+  //   width: $coverWidth;
+  //   height: $coverHeight;
+  //   border-radius: none;
+  // }
   to   {
     top: 2vh;
     right: 2vh;
@@ -309,13 +309,13 @@ header {
   }
 }
 @keyframes circleToCover {
-  from {
-    top: 2vh;
-    right: 2vh;
-    width: 6vh;
-    height: 6vh;
-    border-radius: 3vh;
-  }
+  // from {
+  //   top: 2vh;
+  //   right: 2vh;
+  //   width: 6vh;
+  //   height: 6vh;
+  //   border-radius: 3vh;
+  // }
   to   {
     top: 0;
     right: 0;
@@ -364,25 +364,22 @@ header {
     padding-top: $coverHeight;
   }
 }
-
+*/
 
 // fullscreen card
 @media (max-aspect-ratio: 3/4) {
-  #card {
+  .card {
     width: 100%;
     height: 100%;
     border-radius: 0;
   }
 
-  #cover {
+  .cover {
     width: 100%;
-
-    .image {
-      width: 100%;
-    }
+  }
+  .cover__image {
+    width: 100%;
   }
 
 }
-
-
 

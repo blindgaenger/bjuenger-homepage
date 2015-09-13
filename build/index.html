@@ -15,43 +15,42 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <div id="card" itemscope itemtype="http://schema.org/Person">
+    <div class="card card--description" itemscope itemtype="http://schema.org/Person">
 
-  <div id="cover">
-    <img class="image" src="images/me.png" alt="Bernd Jünger">
+  <div class="cover">
+    <img class="cover__image" src="images/me.png" alt="Bernd Jünger">
   </div>
 
-  <header>
+  <header class="person">
     <p class="person__job" itemprop="jobTitle">Developer</p>
     <h1 class="person__name" itemprop="name">Bernd Jünger</h1>
+    <div class="person__socials">
+      <ul>
+        <li>
+          <a class="icon twitter" href="https://www.twitter.com/blindgaenger" title="twitter profile">
+            <span class="label">Twitter</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon github" href="https://github.com/blindgaenger" title="github profile">
+            <span class="label">Github</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon mail" href="mailto:mail@bjuenger.de" title="mail address">
+            <span class="label">Mail</span>
+          </a>
+        </li>
+        <li>
+          <a class="icon xing" href="https://www.xing.com/profile/Bernd_Juenger" title="xing profile">
+            <span class="label">Xing</span>
+          </a>
+        </li>
+      </ul>
+    </div>
   </header>
 
-  <div id="socials">
-    <ul>
-      <li>
-        <a class="icon twitter" href="https://www.twitter.com/blindgaenger" title="twitter profile">
-          <span class="label">Twitter</span>
-        </a>
-      </li>
-      <li>
-        <a class="icon github" href="https://github.com/blindgaenger" title="github profile">
-          <span class="label">Github</span>
-        </a>
-      </li>
-      <li>
-        <a class="icon mail" href="mailto:mail@bjuenger.de" title="mail address">
-          <span class="label">Mail</span>
-        </a>
-      </li>
-      <li>
-        <a class="icon xing" href="https://www.xing.com/profile/Bernd_Juenger" title="xing profile">
-          <span class="label">Xing</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-
-  <div id="introduction">
+  <div class="introduction">
     <div class="introduction__text">
       <p class="introduction__text--hamburg">Currently living in Hamburg</p>
       <p class="introduction__text--software">Web front-end &amp; back-end</p>
@@ -60,10 +59,35 @@
     <a  class="introduction__more" href="#description">READ MORE</a>
   </div>
 
-  <div id="description" itemprop="description">
-    <p>FOO</p>
-    <p>BAR</p>
-    <p>QUX</p>
+  <div class="description" itemprop="description">
+
+    <!--
+    - studies computer-science
+    - mentasys / pangora
+      - E-commerce
+      - editorial tools
+      - search-engine
+    - avocadostore
+      - CTO
+    - mindmatters
+      - news aktuell GmbH - epic relations
+      - pilot GmbH - Mercury
+    - today i made
+      - co-founder
+    - njiuko
+      - SPORTFIVE GmbH Cockpit
+      - Xing - Content/News
+    - everyjob
+    -->
+
+    <p>Löse Probleme gerne mit Software, baue also Anwendungen, schiele öfter mal in Richtung Web-Design, aber meistens schreibe und teste ich Code und setze das Ganze auf einem Server auf.</p>
+    <p>Habe Informatik in Karlsruhe studiert, danach viel Erfahrung im E-Commerce Shopping Bereich gesammelt, später auch in einem Hamburger Startup und bin jetzt bei einem Agilen Dienstleister.</p>
+    <p>Mag die Analyse von Workflows und die Konzeption von Software-Systemen, habe kleinere Teams angeleitet, aber zuviele Diplomarbeiten betreut.</p>
+    <!--
+    <p>Liebe Ruby mit und ohne Rails, habe früher viel Java getrunken, und bin begeistert was gerade mit Javascript passiert.</p>
+    <p>Notiere alles in Markdown, versioniere noch mehr mit Git, kann nicht ohne meine ZSH leben und bin momentan mit Sublime Text 2 zufrieden.</p>
+    -->
+    <p>Bastel ein paar Dinge in meiner Freizeit, bin aber trotzdem gerne mal Offline unterwegs.</p>
   </div>
 
 </div>
