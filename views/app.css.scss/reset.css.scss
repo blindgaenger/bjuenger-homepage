@@ -1,0 +1,51 @@
+/*
+based on normalize.css v3.0.3
+stripped out the not needed stuff
+*/
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+header, footer, main, nav, article, section {
+  display: block;
+}
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/////////////////
+
+/**
+ * Remove default margin.
+ */
+html, body,
+div, h1, h2, p, ul, li,
+span, a, i, strong,
+header, footer, main, nav, article, section {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * make the page fill the whole
+ */
+html, body {
+  width: 100%;
+  height: 100%;
+}
