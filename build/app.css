@@ -19,7 +19,7 @@ html, body { width: 100%; height: 100%; }
 
 html { font-size: 2vh; }
 
-body { background: url("images/grid.png") #FAFAFA; color: #4A4A4A; font-family: 'Roboto', sans-serif; font-weight: 300; }
+body { font-family: 'Roboto', sans-serif; font-weight: 300; background: url("images/grid.png") #FAFAFA; color: #4A4A4A; }
 
 .card { width: 50vh; overflow: hidden; margin: 5vh auto; background-color: #FFFFFF; border-radius: 0.6vh; box-shadow: 2vh 3vh 17vh -4vh rgba(0, 0, 0, 0.4); }
 
