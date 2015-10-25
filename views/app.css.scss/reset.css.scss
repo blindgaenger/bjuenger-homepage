@@ -35,7 +35,7 @@ a:hover {
  * Remove default margin.
  */
 html, body,
-div, h1, h2, p, ul, li,
+div, h1, h2, p, ol, ul, li,
 span, a, i, strong,
 header, footer, main, nav, article, section {
   margin: 0;
@@ -48,4 +48,11 @@ header, footer, main, nav, article, section {
 html, body {
   width: 100%;
   height: 100%;
+}
+
+/**
+ * plain lists
+ */
+ol, ul {
+  list-style: none
 }
