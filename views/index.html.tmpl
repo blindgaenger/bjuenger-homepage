@@ -1,9 +1,8 @@
 {{define "content"-}}
-
 <div class="card" itemscope itemtype="http://schema.org/Person">
 
   <header class="person">
-    <img class="person__image" src="images/me.png" alt="Bernd Jünger">
+    <div class="person__image"></div>
     <p class="person__job" itemprop="jobTitle">Developer</p>
     <h1 class="person__name" itemprop="name">Bernd Jünger</h1>
   </header>
@@ -12,36 +11,37 @@
     <section class="social">
       <ul>
         <li>
-          <a class="social__icon social__icon--twitter" href="https://www.twitter.com/blindgaenger" title="twitter profile">
-            <span class="label">Twitter</span>
+          <a class="social__link social__link--twitter" href="https://www.twitter.com/blindgaenger" title="twitter profile">
+            <span>Twitter</span>
           </a>
         </li>
         <li>
-          <a class="social__icon social__icon--github" href="https://github.com/blindgaenger" title="github profile">
-            <span class="label">Github</span>
+          <a class="social__link social__link--github" href="https://github.com/blindgaenger" title="github profile">
+            <span>Github</span>
           </a>
         </li>
         <li>
-          <a class="social__icon social__icon--mail" href="mailto:mail@bjuenger.de" title="mail address">
-            <span class="label">Mail</span>
+          <a class="social__link social__link--mail" href="mailto:mail@bjuenger.de" title="mail address">
+            <span>Mail</span>
           </a>
         </li>
         <li>
-          <a class="social__icon social__icon--xing" href="https://www.xing.com/profile/Bernd_Juenger" title="xing profile">
-            <span class="label">Xing</span>
+          <a class="social__link social__link--xing" href="https://www.xing.com/profile/Bernd_Juenger" title="xing profile">
+            <span>Xing</span>
           </a>
         </li>
       </ul>
     </section>
 
     <section class="intro" itemprop="description">
-      <p class="intro__hamburg">Lebe momentan in Hamburg</p>
-      <p class="intro__software">Entwickle Software für das Web</p>
+      <p class="intro__hamburg">Currently living in Hamburg</p>
+      <p class="intro__web">Front &amp; back end for the web</p>
       <p class="intro__happy">Happy to be me!</p>
     </section>
 
     <section class="about">
       <p>Löse Probleme gerne mit Software, baue also Anwendungen, schiele öfter mal in Richtung Web-Design, aber meistens schreibe und teste ich Code und setze das Ganze auf einem Server auf.</p>
+      <h2>Studium</h2>
       <p>Habe Informatik in Karlsruhe studiert, danach viel Erfahrung im E-Commerce Shopping Bereich gesammelt, später auch in einem Hamburger Startup und bin jetzt bei einem Agilen Dienstleister.</p>
       <p>Mag die Analyse von Workflows und die Konzeption von Software-Systemen, habe kleinere Teams angeleitet, aber zuviele Diplomarbeiten betreut.</p>
       <p>Liebe Ruby mit und ohne Rails, habe früher viel Java getrunken, und bin begeistert was gerade mit Javascript passiert.</p>
@@ -51,7 +51,7 @@
   </main>
 
   <footer>
-    <div>The end.</div>
+    <div class="seeyou"></div>
   </footer>
 
 </div>
