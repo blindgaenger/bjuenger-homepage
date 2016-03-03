@@ -60,8 +60,7 @@ end
 
 desc "setup the heroku instance"
 task :setup do
-  system "heroku create --stack cedar"
-
+  system "heroku create --stack cedar-14"
   system "heroku addons:add custom_domains"
   #system "heroku domains:remove bjuenger.de --app old-bjuenger-homepage"
   system "heroku domains:add bjuenger.de"
