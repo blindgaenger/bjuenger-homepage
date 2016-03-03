@@ -7,6 +7,7 @@ gem 'sass'
 gem 'jammit'
 gem 'rake'
 gem 'maruku'
+gem 'iconv'
 
 group :development do
   gem 'sinatra-reloader'

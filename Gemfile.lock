@@ -17,6 +17,7 @@ GEM
       rest-client (~> 1.6.1)
       rubyzip
       term-ansicolor (~> 1.0.5)
+    iconv (1.0.4)
     jammit (0.6.5)
       yui-compressor (>= 0.9.3)
     launchy (2.0.5)
@@ -62,6 +63,7 @@ DEPENDENCIES
   foreman
   haml
   heroku
+  iconv
   jammit
   maruku
   rake
