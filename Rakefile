@@ -53,6 +53,11 @@ namespace :assets do
   end
 end
 
+desc "install the needed tools"
+task :install do
+  system "brew install pngcrush"
+end
+
 desc "setup the heroku instance"
 task :setup do
   system "heroku create --stack cedar"
