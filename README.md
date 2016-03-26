@@ -1,4 +1,16 @@
-# card
+# bjuenger.de
+
+## Development
+
+quodlibet
+
+    go get github.com/blindgaenger/quodlibet
+
+caddy
+
+    brew install caddy
+
+## TODO
 
 hardware acceleration on card
 
