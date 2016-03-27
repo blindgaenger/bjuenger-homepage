@@ -1,6 +1,9 @@
 # bjuenger.de
 
-## Development
+My personal homepage (in German). http://bjuenger.de
+
+
+## Tools
 
 quodlibet
 
@@ -9,6 +12,48 @@ quodlibet
 caddy
 
     brew install caddy
+
+
+## GitHub Pages
+
+https://pages.github.com/
+https://gohugo.io/tutorials/github-pages-blog/#configure-git-workflow
+
+Add Github pages
+
+    git checkout --orphan gh-pages
+    git rm -rf .
+    echo "YAY" >index.html
+    git add .
+    git commit -m "initial commit"
+    git push origin gh-pages
+
+Check out
+
+    open http://blindgaenger.github.io/bjuenger-homepage/
+
+Remove build dir
+
+    git checkout master
+    rm -rf build
+    git add .
+    git commit -m "removed build dir"
+    git push origin master
+
+Add build dir from gh-pages
+
+    git fetch --all
+    git subtree add --prefix=build git@github.com:blindgaenger/bjuenger-homepage.git gh-pages
+    git subtree pull --prefix=build git@github.com:blindgaenger/bjuenger-homepage.git gh-pages
+
+Build project
+
+    quodlibet build
+    git add --all build
+    git commit -m "updated build"
+    git push origin master
+    git subtree push --prefix=build git@github.com:blindgaenger/bjuenger-homepage.git gh-pages
+
 
 ## TODO
 
@@ -38,3 +83,9 @@ cover image
       display: block;
       object-fit: cover;
     }
+
+add favicon
+
+remove unused js
+
+remove comments from minified css
