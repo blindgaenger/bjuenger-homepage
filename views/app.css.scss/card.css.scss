@@ -76,32 +76,29 @@ body {
 
   &__link {
     display: inline-block;
-    width: 7vh;
-    height: 7vh;
-    line-height: 7vh;
-    vertical-align: middle;
-
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-    color: $colorBlack;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 4.3rem;
     border-radius: 50%;
 
-    span {
-      display: none;
+    svg {
+      fill: $colorBlack;
+      width: 1.5rem;
+      height: 1.5rem;
     }
 
     &:hover {
       background-color: $colorBlack;
-      color: $colorWhite;
+      svg {
+        fill: $colorWhite;
+      }
+    }
+
+    &, path {
+      transition-timing-function: ease-in-out;
+      transition: 150ms;
     }
   }
-
-  &__link--twitter:before { content: ""; font-size: 1.5rem; }
-  &__link--github:before  { content: ""; font-size: 1.5rem; }
-  &__link--mail:before    { content: ""; font-size: 1.25rem; }
-  &__link--xing:before    { content: ""; font-size: 1.25rem; }
 }
 
 /////////////////////////////
