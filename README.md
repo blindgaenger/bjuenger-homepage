@@ -25,12 +25,12 @@ Add Github pages
     git rm -rf .
     echo "YAY" >index.html
     git add .
-    git commit -m "initial commit"
+    git commit -m "initial gh-pages"
     git push origin gh-pages
 
 Check out
 
-    open http://blindgaenger.github.io/bjuenger-homepage/
+    open https://blindgaenger.github.io/bjuenger-homepage/
 
 Remove build dir
 
