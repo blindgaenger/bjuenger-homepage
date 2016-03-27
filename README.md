@@ -89,3 +89,12 @@ add favicon
 remove unused js
 
 remove comments from minified css
+
+cloudflare minification & caching
+
+    https://scotch.io/tutorials/jekyll-github-pages-and-cloudflare-for-pagespeed-win
+    Performance profile: this will change by itself
+    Individual performance settings: Aggressive
+    Minimum expire TTL: 24 days
+    Auto Minify (Web optimization): select all (JS, CSS, HTML)
+    Rocket Loader: off
