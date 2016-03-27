@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 based on normalize.css v3.0.3
 stripped out the not needed stuff
@@ -41,19 +40,15 @@ body { font-family: 'Roboto', sans-serif; font-weight: 300; background: url("ima
 
 .social li { display: inline-block; padding: 0 0.8rem; }
 
-.social__link { display: inline-block; width: 7vh; height: 7vh; line-height: 7vh; vertical-align: middle; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: none; color: #4A4A4A; border-radius: 50%; }
+.social__link { display: inline-block; width: 3.5rem; height: 3.5rem; line-height: 4.3rem; border-radius: 50%; }
 
-.social__link span { display: none; }
+.social__link svg { fill: #4A4A4A; width: 1.5rem; height: 1.5rem; }
 
-.social__link:hover { background-color: #4A4A4A; color: #FFFFFF; }
+.social__link:hover { background-color: #4A4A4A; }
 
-.social__link--twitter:before { content: ""; font-size: 1.5rem; }
+.social__link:hover svg { fill: #FFFFFF; }
 
-.social__link--github:before { content: ""; font-size: 1.5rem; }
-
-.social__link--mail:before { content: ""; font-size: 1.25rem; }
-
-.social__link--xing:before { content: ""; font-size: 1.25rem; }
+.social__link, .social__link path { transition-timing-function: ease-in-out; transition: 150ms; }
 
 .intro { width: 31vh; margin: 4vh auto; padding: 3vh 0; text-align: center; line-height: 5vh; overflow: hidden; border-color: #D1D1D1; border-style: double; border-width: medium 0; }
 
