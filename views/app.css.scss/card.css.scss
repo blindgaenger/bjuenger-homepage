@@ -32,12 +32,12 @@ body {
     height: $card-width / 2;
     background-image: url("images/me.png");
     background-size: cover;
-    background-position: 32% 0%; // don't put the face in the center
+    background-position: 32% 0; // don't put the face in the center
     // filter: drop-shadow(0 0 0.5vh darken($color-black, 20%));
 
     box-shadow:
-      0px 3px 3px rgba(255, 255, 255, 0.25),
-      0px 3px 6px rgba(0, 0, 0, 0.2);
+      0 3px 3px rgba(255, 255, 255, 0.25),
+      0 3px 6px rgba(0, 0, 0, 0.2);
   }
 
   &__job {
