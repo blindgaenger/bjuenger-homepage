@@ -5,18 +5,18 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  background: url("images/grid.png") $colorLight fixed;
-  color: $colorBlack;
+  background: url("images/grid.png") $color-light fixed;
+  color: $color-black;
 }
 
 ////////////////////////////////////////
 
 .card {
-  width: $cardWidth;
+  width: $card-width;
   overflow: hidden;
   margin: 5vh auto;
 
-  background-color: $colorWhite;
+  background-color: $color-white;
   border-radius: 0.6vh;
   box-shadow: 2vh 3vh 17vh -4vh rgba(0,0,0,0.40);
 }
@@ -28,12 +28,12 @@ body {
   text-transform: uppercase;
 
   &__image {
-    width: $cardWidth;
-    height: $cardWidth / 2;
+    width: $card-width;
+    height: $card-width / 2;
     background-image: url("images/me.png");
     background-size: cover;
     background-position: 32% 0%; // don't put the face in the center
-    // filter: drop-shadow(0 0 0.5vh darken($colorBlack, 20%));
+    // filter: drop-shadow(0 0 0.5vh darken($color-black, 20%));
 
     box-shadow:
       0px 3px 3px rgba(255, 255, 255, 0.25),
@@ -44,7 +44,7 @@ body {
     margin-top: 2.5rem;
     margin-bottom: 1.25rem;
     font-size: 1.25rem;
-    color: $colorDark;
+    color: $color-dark;
 
     // dashes before and after
     &:before,
@@ -59,7 +59,7 @@ body {
     margin-bottom: 1.25rem;
     font-size: 2.5rem;
     font-weight: 300;
-    color: $colorBlack;
+    color: $color-black;
   }
 }
 
@@ -81,22 +81,23 @@ body {
     line-height: 4.3rem;
     border-radius: 50%;
 
-    svg {
-      fill: $colorBlack;
-      width: 1.5rem;
-      height: 1.5rem;
-    }
+    transition-timing-function: ease-in-out;
+    transition: 150ms;
+  }
 
-    &:hover {
-      background-color: $colorBlack;
-      svg {
-        fill: $colorWhite;
-      }
-    }
+  &__image {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: $color-black;
 
-    &, path {
-      transition-timing-function: ease-in-out;
-      transition: 150ms;
+    transition-timing-function: ease-in-out;
+    transition: 700ms;
+  }
+
+  &__link:hover {
+    background-color: $color-black;
+    .social__image {
+      fill: $color-white;
     }
   }
 }
@@ -112,7 +113,7 @@ body {
   line-height: 5vh;
   overflow: hidden;
 
-  border-color: $colorNormal;
+  border-color: $color-normal;
   border-style: double;
   border-width: medium 0;
 
@@ -126,7 +127,7 @@ body {
 .about {
   margin: 2.5vh auto;
   padding: 0 10vh;
-  color: $colorBlack;
+  color: $color-black;
 
   h2 {
     margin-top: 1.25rem;
@@ -152,7 +153,7 @@ body {
   width: 15vh;
   height: 0;
 
-  border-color: $colorNormal;
+  border-color: $color-normal;
   border-style: double;
   border-width: medium 0 0 0;
 
@@ -176,8 +177,8 @@ body {
 
   .person {
     &__image {
-      width: $viewWidth;
-      height: $viewWidth / 2;
+      width: $view-width;
+      height: $view-width / 2;
     }
   }
 
