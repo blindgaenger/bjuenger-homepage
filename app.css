@@ -40,15 +40,13 @@ body { font-family: 'Roboto', sans-serif; font-weight: 300; background: url("ima
 
 .social li { display: inline-block; padding: 0 0.8rem; }
 
-.social__link { display: inline-block; width: 3.5rem; height: 3.5rem; line-height: 4.3rem; border-radius: 50%; }
+.social__link { display: inline-block; width: 3.5rem; height: 3.5rem; line-height: 4.3rem; border-radius: 50%; transition-timing-function: ease-in-out; transition: 150ms; }
 
-.social__link svg { fill: #4A4A4A; width: 1.5rem; height: 1.5rem; }
+.social__image { width: 1.5rem; height: 1.5rem; fill: #4A4A4A; transition-timing-function: ease-in-out; transition: 700ms; }
 
 .social__link:hover { background-color: #4A4A4A; }
 
-.social__link:hover svg { fill: #FFFFFF; }
-
-.social__link, .social__link path { transition-timing-function: ease-in-out; transition: 150ms; }
+.social__link:hover .social__image { fill: #FFFFFF; }
 
 .intro { width: 31vh; margin: 4vh auto; padding: 3vh 0; text-align: center; line-height: 5vh; overflow: hidden; border-color: #D1D1D1; border-style: double; border-width: medium 0; }
 
