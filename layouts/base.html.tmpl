@@ -4,9 +4,17 @@
   <head>
     <meta charset="utf-8">
     <title>{{.Params.title}}</title>
+
     <meta name="description" content="{{.Params.description}}">
     <meta name="keywords" content="{{.Params.keywords}}">
     <meta name="viewport" content="initial-scale=1">
+
+    <meta property="og:url"         content="{{.Params.baseUrl}}">
+    <meta property="og:type"        content="profile">
+    <meta property="og:title"       content="{{.Params.title}}">
+    <meta property="og:description" content="{{.Params.description}}">
+    <meta property="og:image"       content="{{.Params.baseUrl}}/images/me.png">
+
     <link rel="stylesheet" href="/app.css">
     <link rel="canonical" href="{{.Params.baseUrl}}">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
