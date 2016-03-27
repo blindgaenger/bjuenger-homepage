@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/*
+based on normalize.css v3.0.3
+stripped out the not needed stuff
+*/
+/** Correct `block` display not defined for any HTML5 element in IE 8/9. Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox. Correct `block` display not defined for `main` in IE 11. */
+header, footer, main, nav, article, section { display: block; }
+
+/** Remove the gray background color from active links in IE 10. */
+a { background-color: transparent; }
+
+/** Improve readability of focused elements when they are also in an active/hover state. */
+a:active, a:hover { outline: 0; }
+
+/** Remove default margin. */
+html, body, div, h1, h2, p, ol, ul, li, span, a, i, strong, header, footer, main, nav, article, section { margin: 0; padding: 0; }
+
+/** make the page fill the whole */
+html, body { width: 100%; height: 100%; }
+
+/** plain lists */
+ol, ul { list-style: none; }
+
+html { font-size: 2vh; }
+
+body { font-family: 'Roboto', sans-serif; font-weight: 300; background: url("images/grid.png") #FAFAFA; color: #4A4A4A; }
+
+.card { width: 65vh; overflow: hidden; margin: 5vh auto; background-color: #FFFFFF; border-radius: 0.6vh; box-shadow: 2vh 3vh 17vh -4vh rgba(0, 0, 0, 0.4); }
+
+.person { text-align: center; text-transform: uppercase; }
+
+.person__image { width: 65vh; height: 32.5vh; background-image: url("images/me.png"); background-size: cover; background-position: 32% 0%; box-shadow: 0px 3px 3px rgba(255, 255, 255, 0.25), 0px 3px 6px rgba(0, 0, 0, 0.2); }
+
+.person__job { margin-top: 2.5rem; margin-bottom: 1.25rem; font-size: 1.25rem; color: #9B9B9B; }
+
+.person__job:before, .person__job:after { content: "\2014"; margin: 0.5rem; }
+
+.person__name { margin-top: 1.25rem; margin-bottom: 1.25rem; font-size: 2.5rem; font-weight: 300; color: #4A4A4A; }
+
+.social { margin: 1rem auto; text-align: center; }
+
+.social li { display: inline-block; padding: 0 0.8rem; }
+
+.social__link { display: inline-block; width: 7vh; height: 7vh; line-height: 7vh; vertical-align: middle; font-family: FontAwesome; font-style: normal; font-weight: normal; text-decoration: none; color: #4A4A4A; border-radius: 50%; }
+
+.social__link span { display: none; }
+
+.social__link:hover { background-color: #4A4A4A; color: #FFFFFF; }
+
+.social__link--twitter:before { content: ""; font-size: 1.5rem; }
+
+.social__link--github:before { content: ""; font-size: 1.5rem; }
+
+.social__link--mail:before { content: ""; font-size: 1.25rem; }
+
+.social__link--xing:before { content: ""; font-size: 1.25rem; }
+
+.intro { width: 31vh; margin: 4vh auto; padding: 3vh 0; text-align: center; line-height: 5vh; overflow: hidden; border-color: #D1D1D1; border-style: double; border-width: medium 0; }
+
+.intro__hamburg { font-size: 2.60vh; }
+
+.intro__web { font-size: 2.45vh; }
+
+.intro__happy { font-size: 4.25vh; padding: 0.7vh 0; }
+
+.about { margin: 2.5vh auto; padding: 0 10vh; color: #4A4A4A; }
+
+.about h2 { margin-top: 1.25rem; margin-bottom: 1.25rem; font-size: 1.5rem; font-weight: 300; text-align: center; text-transform: uppercase; }
+
+.about p { margin-top: 1rem; font-size: 1.1rem; line-height: 1.5rem; text-align: justify; }
+
+.seeyou { margin: 3rem auto; width: 15vh; height: 0; border-color: #D1D1D1; border-style: double; border-width: medium 0 0 0; text-align: center; }
+
+@media (max-aspect-ratio: 3 / 4) { html { font-size: 4vw; }
+  .card { width: auto; min-height: 100%; margin: 0; border-radius: 0; }
+  .person__image { width: 100vw; height: 50vw; }
+  .intro { width: 60%; line-height: 2.3rem; }
+  .intro__hamburg { font-size: 1.23rem; }
+  .intro__web { font-size: 1.16rem; }
+  .intro__happy { font-size: 2.05rem; padding: 0.7vh 0; }
+  .about { padding: 0 2rem; } }
