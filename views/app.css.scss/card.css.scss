@@ -5,7 +5,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  background: url("images/grid.png") $colorLight;
+  background: url("images/grid.png") $colorLight fixed;
   color: $colorBlack;
 }
 
@@ -147,7 +147,7 @@ body {
 
 ////////////////////////////////////////
 
-.seeyou {
+.separator {
   margin: 3rem auto;
   width: 15vh;
   height: 0;
