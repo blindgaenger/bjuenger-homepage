@@ -22,7 +22,7 @@ ol, ul { list-style: none; }
 
 html { font-size: 2vh; }
 
-body { font-family: 'Roboto', sans-serif; font-weight: 300; background: url("images/grid.png") #FAFAFA; color: #4A4A4A; }
+body { font-family: 'Roboto', sans-serif; font-weight: 300; background: url("images/grid.png") #FAFAFA fixed; color: #4A4A4A; }
 
 .card { width: 65vh; overflow: hidden; margin: 5vh auto; background-color: #FFFFFF; border-radius: 0.6vh; box-shadow: 2vh 3vh 17vh -4vh rgba(0, 0, 0, 0.4); }
 
@@ -64,7 +64,7 @@ body { font-family: 'Roboto', sans-serif; font-weight: 300; background: url("ima
 
 .about p { margin-top: 1rem; font-size: 1.1rem; line-height: 1.5rem; text-align: justify; }
 
-.seeyou { margin: 3rem auto; width: 15vh; height: 0; border-color: #D1D1D1; border-style: double; border-width: medium 0 0 0; text-align: center; }
+.separator { margin: 3rem auto; width: 15vh; height: 0; border-color: #D1D1D1; border-style: double; border-width: medium 0 0 0; text-align: center; }
 
 @media (max-aspect-ratio: 3 / 4) { html { font-size: 4vw; }
   .card { width: auto; min-height: 100%; margin: 0; border-radius: 0; }
