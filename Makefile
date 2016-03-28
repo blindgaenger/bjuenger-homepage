@@ -1,5 +1,8 @@
 dev:
-	caddy
+	sudo caddy
+
+open:
+	open https://localhost
 
 build:
 	quodlibet build
