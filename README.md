@@ -1,6 +1,6 @@
 # bjuenger.de
 
-My personal homepage (in German). http://bjuenger.de
+My personal homepage (in German). https://bjuenger.de
 
 
 ## Tools
