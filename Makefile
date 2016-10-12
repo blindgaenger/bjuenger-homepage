@@ -1,5 +1,5 @@
 dev:
-	sudo caddy
+	ulimit -n 8192 && sudo caddy
 
 open:
 	open https://localhost
