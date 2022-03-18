@@ -39,11 +39,11 @@ licenses are compatible with the license above. We've included links so you
 can learn more if you want. 
 
 1. react: React is a JavaScript library for building user interfaces.
-2. react-spring: A spring-physics based animation library.
+2. styled-components: write actual CSS code to style your components
 3. vite: Vite is a new breed of frontend build tool.
 4. @vitejs/plugin-react-refresh: 
 5. wouter: wouter is a tiny router for modern React and Preact apps.
-6. HK Grotesk: The font we're using. 
+6. Roboto: The font we're using. 
 
 
 ******************************************************************************
@@ -78,13 +78,13 @@ END, react
 
 
 ******************************************************************************
-2. react-spring
-URL: https://www.react-spring.io/
-     https://github.com/pmndrs/react-spring
+2. styled-components
+URL: https://styled-components.com/
+     https://github.com/styled-components/styled-components
 ******************************************************************************
 MIT License
 
-Copyright (c) 2018-present Paul Henschel, react-spring, all contributors
+Copyright (c) 2016-present Glen Maddern and Maximilian Stoiber
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -104,7 +104,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ******************************************************************************
-END, react-spring
+END, styled-components
 ******************************************************************************
 
 
@@ -185,13 +185,13 @@ END, wouter
 
 
 ******************************************************************************
-6. HK Grotesk
-URL: https://hanken.co/products/hk-grotesk
+6. Roboto
+URL: https://github.com/googlefonts/roboto
 ******************************************************************************
-HK Grotesk was designed by Hanken Design Co. It is shared using a SIL OFL
-license. Full license text can be found at:
+Roboto was designed by Christian Robertson for Google. It is shared using a 
+Apache License 2.0. Full license text can be found at:
 
-https://hanken.co/pages/web-fonts-eula
+https://github.com/googlefonts/roboto/blob/main/LICENSE
 ******************************************************************************
-END, HK Grotesk
+END, Roboto
 ******************************************************************************

@@ -33,7 +33,7 @@ export default function About() {
           Right now, I mostly use TypeScript along the stack, with all its quirks.
           And more and more often Python as soon as data comes into play.
           Yes, React Native is enough for most mobile apps.
-          I've worked professionally with a wide variety of languages and frameworks.
+          But I've worked professionally with a wide variety of languages and frameworks.
         </p>
 
         <h2>Beyond</h2>

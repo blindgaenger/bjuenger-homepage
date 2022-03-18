@@ -12,7 +12,6 @@
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.1.2",
     "react-player": "^2.9.0",
-    "react-spring": "^9.3.0",
     "styled-components": "^5.3.3",
     "wouter": "^2.7.4"
   },
