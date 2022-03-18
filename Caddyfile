@@ -1,3 +1,0 @@
-localhost:443
-tls cert.crt cert.key
-root build

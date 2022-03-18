@@ -1,14 +1,27 @@
-dev:
-	ulimit -n 8192 && sudo caddy
+# https://stackoverflow.com/questions/69417788/vite-https-on-localhost
+.PHONEY: setup
+setup:
+	brew install mkcert
+	brew install nss
+	mkcert -install
 
-open:
-	open https://localhost
+.PHONEY: start
+start:
+	npm run start
 
-build:
-	quodlibet build
+.PHONEY: clean
+clean:
+	rm -rf build/*
 
-deploy:
+.PHONEY: build
+build: clean
+	npm run build
+
+.PHONEY: preview
+preview: build
+	npm run serve
+
+.PHONY: deploy
+deploy: build
 	git push origin master
 	git subtree push --prefix=build git@github.com:blindgaenger/bjuenger-homepage.git gh-pages
-
-.PHONY: build deploy

@@ -1,65 +1,10 @@
-# bjuenger.de
+# bjuenger-homepage
 
-My personal homepage (in German). https://bjuenger.de
-
-
-## Tools
-
-quodlibet
-
-    go get github.com/blindgaenger/quodlibet
-
-caddy
-
-    brew install caddy
-
-self-signed certificate
-
-    openssl req -new -newkey rsa:2048 -sha256 -days 365 -nodes -x509 -keyout cert.key -out cert.crt
-
-
-## GitHub Pages
-
-https://pages.github.com/
-https://gohugo.io/tutorials/github-pages-blog/#configure-git-workflow
-
-Add Github pages
-
-    git checkout --orphan gh-pages
-    git rm -rf .
-    echo "YAY" >index.html
-    git add .
-    git commit -m "initial gh-pages"
-    git push origin gh-pages
-
-Check out
-
-    open https://blindgaenger.github.io/bjuenger-homepage/
-
-Remove build dir
-
-    git checkout master
-    rm -rf build
-    git add .
-    git commit -m "removed build dir"
-    git push origin master
-
-Add build dir from gh-pages
-
-    git fetch --all
-    git subtree add --prefix=build git@github.com:blindgaenger/bjuenger-homepage.git gh-pages
-    git subtree pull --prefix=build git@github.com:blindgaenger/bjuenger-homepage.git gh-pages
-
-Build project
-
-    quodlibet build
-    git add --all build
-    git commit -m "updated build"
-    git push origin master
-    git subtree push --prefix=build git@github.com:blindgaenger/bjuenger-homepage.git gh-pages
-
+My [personal homepage](https://bjuenger.de/) hosted on [GitHub pages](https://blindgaenger.github.io/bjuenger-homepage/).
 
 ## TODO
+
+license for Roboto font
 
 hardware acceleration on card
 
@@ -92,8 +37,6 @@ add favicon
 
 remove unused js
 
-remove comments from minified css
-
 cloudflare minification & caching
 
     https://scotch.io/tutorials/jekyll-github-pages-and-cloudflare-for-pagespeed-win
@@ -102,3 +45,9 @@ cloudflare minification & caching
     Minimum expire TTL: 24 days
     Auto Minify (Web optimization): select all (JS, CSS, HTML)
     Rocket Loader: off
+
+## TBD
+
+Learn with Jason - react-three-fiber
+- https://www.youtube.com/watch?v=1rP3nNY2hTo
+- https://github.com/drcmda/learnwithjason
